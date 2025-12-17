@@ -1,18 +1,44 @@
-# React + Vite
+# Exo prepa UAA5 (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Réaliser une application React SPA pour une site de voyage
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Page du site
 
-## React Compiler
+- **Page d'accueil**
+  Contenu : Titre, phrase d'accroche et une image
+- **Page des destinations**
+  Contenu : Les destinations sous la forme d'une liste clicable
+- **Page détail d'une destionation**
+  Contenu : Les informations de la destinations avec son image.
+  Une zone commentaire doit être prévu (lecture et envoi)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-Note: This will impact Vite dev & build performances.
+## Contraintes
 
-## Expanding the ESLint configuration
+- Les données doivent être consommé depuis une WebAPI (fourni).
+- Le site doit avoir une UX clair et être accessible.
+- Le code doit propre et commenté quand necessaire.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Typage des données de l'exemple (pour information):
+
+~~~ Typescript
+export type Destination = {
+  id: number;
+  name: string;
+  shortDescription: string;
+  fullDescription: string;
+  country: string;
+  estimatedBudget: {
+    min: number;
+    max: number | null;
+  };
+  imageUrl: string;
+  slug: string;
+  travelPeriod: {
+    start: string; // format YYYY-MM-DD
+    end: string;   // format YYYY-MM-DD
+  }[];
+};
+~~~

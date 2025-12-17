@@ -1,11 +1,38 @@
-import DestinationListItem from '../../layout/components/DestinationListItem/DestinationListItem'
+// import DestinationListItem from '../../layout/components/DestinationListItem/DestinationListItem'
+
+import { Suspense, use } from "react";
+import { GetAllDestinations } from "../../Services/destination.service"
+import { Link } from "react-router-dom";
+
 
 export default function AllDestinationPage() {
+
+    const promise = GetAllDestinations();
+
     return (
-        <>
-            <h1>AllDestinationPage</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat maxime aut ipsam molestias, eligendi vero maiores in delectus doloremque atque vitae tempore dolore quasi eum consectetur libero consequuntur deleniti adipisci?</p>
-            <DestinationListItem />
-        </>
+        <div>
+            <p>Quel sera votre choix ?</p>
+            <Suspense fallback={"Vérification de catalogue, veuillez patienter..."}>
+                <MapAllDest AllDestPromise={promise} />
+            </Suspense>
+
+            {/* <DestinationListItem /> */}
+        </div>
+    )
+}
+
+function MapAllDest({ AllDestPromise }) {
+
+    const DestList = use(AllDestPromise);
+
+    return (
+        <ul>
+            {DestList.map(dest => (
+                <li key={dest.id}>
+                    <span>{dest.id}</span><span>{dest.name}</span><span>{dest.shortDescription}</span>
+                    <Link to={`${dest.id}`}>Click here</Link>
+                </li>
+            ))}
+        </ul>
     )
 }

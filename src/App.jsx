@@ -13,7 +13,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path='destination' element={<DestinationPage />}>
           <Route index element={<AllDestinationPage />} />
-          <Route path=':destinationId' element={<OneDestinationPage />} />
+          <Route path=':id' element={<OneDestinationPage />} />
         </Route>
       </Routes>
     </>
