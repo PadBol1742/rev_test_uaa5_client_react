@@ -1,8 +1,10 @@
 import { Link } from 'react-router'
+import clsx from "clsx";
 
-export default function NavBar() {
+
+export default function NavBar({color}) {
     return (
-        <nav>
+        <nav className={clsx(["nav-bar"], color)}>
             <ul>
                 <li>
                     <Link to="/">Accueil</Link>

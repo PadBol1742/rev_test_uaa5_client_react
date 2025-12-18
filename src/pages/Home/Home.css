@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "../../tailwind.custom.css";
+
+.home {
+  @apply
+    items-center;
+}
+
+#gd-titre {
+  @apply
+    h-1/3 w-full
+    px-8 py-8
+    flex items-center justify-center
+    text-mygreen/60 text-9xl font-bold;
+}
+
+#catch-phrase {
+  @apply
+    h-1/4 w-full
+    px-8 py-8
+    flex items-start justify-center
+     text-9xl font-bold;
+    color:hsl(280, 100%, 61%);
+}
+
+#btn-home {
+  @apply
+    bg-blue-400/60
+    /* h-13 w-lg */
+    px-8 py-4
+    rounded-xl
+    flex justify-self-center
+    text-6xl font-semibold;
+    color:aqua;
+
+  &:hover {
+    @apply
+      bg-blue-600;
+  }
+
+}

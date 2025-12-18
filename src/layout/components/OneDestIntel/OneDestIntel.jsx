@@ -13,7 +13,7 @@ export default function OneDestIntel() {
 
     return (
         <div>
-            <p>Un choix de rêve ! {id}</p>
+            <h3>Un choix de rêve !</h3>
             <Suspense fallback={"Vérification de catalogue, veuillez patienter..."}>
                 <MapOneDest OneDestPromise={promise} />
             </Suspense>
@@ -25,12 +25,12 @@ export default function OneDestIntel() {
 function MapOneDest({ OneDestPromise }) {
 
     const dest = use(OneDestPromise);
-    // document.body.style.cssText += `background-image: url(${dest.config.baseURL + dest.data.imageUrl}); background-size: cover;`;
+    document.body.style.cssText += `background-image: url(${dest.config.baseURL + dest.data.imageUrl}); background-size: cover;`;
 
     return (
 
 
-        <div>
+        <div className='dest-list'>
             <span>{dest.data.id}</span>
             <span>{dest.data.name}</span>
             <span>{dest.data.shortDescription}</span>

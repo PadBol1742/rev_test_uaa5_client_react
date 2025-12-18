@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+.comment-form {
+    @apply
+        bg-gray-50/40
+        w-10/12
+        px-4 py-4
+        rounded-2xl
+        flex flex-col;
+    * {
+        @apply
+            px-2 py-2
+    }
+    h3 {
+        @apply
+            underline;
+    }
+
+    input, textarea {
+        @apply
+            border-solid border-gray-700 border rounded-md;
+    }
+
+    #lbl-msg {
+        @apply
+            block;
+    }
+    #author {
+        @apply
+            w-1/3 ml-8;
+    }
+    #message {
+        @apply
+            w-full;
+    }
+
+
+}

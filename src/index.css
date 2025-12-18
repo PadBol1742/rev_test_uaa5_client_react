@@ -1,4 +1,92 @@
+@import "tailwindcss";
+@import "./tailwind.custom.css";
+
+
+#root {
+  @apply 
+  w-screen h-screen;
+}
+
+#header {
+  @apply
+    h-24 w-full;
+}
+
+
+.nav-bar {
+  >ul {
+    
+    @apply
+    h-24
+    pr-4 gap-1
+    flex flex-col text-end justify-center;
+  }
+  
+  a {
+    @apply
+    text-myblue text-xl font-semibold;
+  }
+  
+  a:hover {
+    color: #9826c5;
+  }
+  
+}
+
+.blue {
+  a {color: hsl(234, 70%, 39%);}
+}
+
+.green {
+  a {color: rgb(37, 177, 37);}
+}
+
+.main {
+  @apply
+    size-full
+    flex flex-col;
+}
+
+
+
 /* 
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -19,6 +107,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -47,9 +136,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -60,9 +151,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

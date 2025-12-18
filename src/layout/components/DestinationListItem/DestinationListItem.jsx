@@ -12,7 +12,7 @@ export default function DestinationListItem() {
 
     return (
         <div>
-            <p>Quel sera votre choix ?</p>
+            <h3>Quel sera votre choix ?</h3>
             <Suspense fallback={"Vérification de catalogue, veuillez patienter..."}>
                 <MapAllDest AllDestPromise={promise} />
             </Suspense>
@@ -27,11 +27,11 @@ function MapAllDest({ AllDestPromise }) {
 
 
     return (
-        <ul>
+        <ul className='dest-list'>
             {DestList.map(dest => (
-                <li key={dest.id}>
-                    <span>{dest.id}</span><span>{dest.name}</span><span>{dest.shortDescription}</span>
-                    <Link to={`${dest.id}`}>Click here</Link>
+                <li className='dest-item' key={dest.id}>
+                    <span className='dest-id'>{dest.id}</span><span className='dest-name'>{dest.name}</span><span className='dest-sh-desc'>{dest.shortDescription}</span>
+                    <Link className='clk-dest' to={`${dest.id}`}> ⇒ Click here ⇐ </Link>
                 </li>
             ))}
         </ul>
