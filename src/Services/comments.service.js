@@ -7,3 +7,9 @@ export async function GetDestinationComments(destinationId) {
     return result.data;
 }
 
+export async function PostDestinationComment(destinationId, commentObj) {
+
+    const result = await axios.post(`https://localhost:7070/api/Destinations/${destinationId}/comments`, { ...commentObj })
+
+    return result;
+}

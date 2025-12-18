@@ -3,7 +3,7 @@ import React from 'react'
 ///Ici un petit géranium qui gère l'appel GetById et affiche le résultat
 import { Suspense, use } from "react";
 import { GetOneDestination } from "/src/Services/destination.service"
-import { useParams } from "react-router";
+import { useParams } from 'react-router';
 
 
 export default function OneDestIntel() {
@@ -25,7 +25,7 @@ export default function OneDestIntel() {
 function MapOneDest({ OneDestPromise }) {
 
     const dest = use(OneDestPromise);
-    document.body.style.cssText += `background-image: url(${dest.config.baseURL + dest.data.imageUrl}); background-size: cover;`;
+    // document.body.style.cssText += `background-image: url(${dest.config.baseURL + dest.data.imageUrl}); background-size: cover;`;
 
     return (
 

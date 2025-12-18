@@ -1,7 +1,11 @@
 import OneDestIntel from '/src/layout/components/OneDestIntel/OneDestIntel'
 import CommentsApp from '/src/layout/features/CommentsApp/CommentsApp'
 
+
 export default function OneDestinationPage() {
+
+
+
     return (
         <>
 
