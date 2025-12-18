@@ -1,6 +1,6 @@
-import NavBar from '../../features/NavBar/NavBar'
+import NavBar from '/src/layout/features/NavBar/NavBar'
 import style from "./Header.module.css";
-import sun from "../../../assets/images/sun.png";
+import sun from "/src/assets/images/sun.png";
 
 export default function Header() {
 
